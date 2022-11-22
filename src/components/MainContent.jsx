@@ -4,7 +4,7 @@ import ExpenseList from "./ExpenseList";
 import FilterByYear from "../components/FilterByYear";
 
 const MainContent = (props) => {
-  const [filteredYear, setFilteredYear] = useState("");
+  const [filteredYear, setFilteredYear] = useState("2022");
   const onYearFilterHandler = (FilterValue) => {
     setFilteredYear(FilterValue);
   };
@@ -27,7 +27,7 @@ const MainContent = (props) => {
             </div>
           </>
         ) : (
-          props.ListData.map((datas) => {
+          myYear.map((datas) => {
             return (
               <>
                 <ExpenseList
